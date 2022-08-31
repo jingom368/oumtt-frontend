@@ -1,0 +1,96 @@
+@import "../../0_basic.scss";
+
+// 2_2_guest 2_3_withyou 2_6_part2
+
+@mixin artist_photo (
+    $w: 156px,
+    $h: 200px,
+    $object-fit: cover,
+    $position: null,
+    $display: flex,
+    $top: 0px,
+) {
+    width: $w;
+    height: $h;
+    object-fit: $object-fit;
+    position: $position;
+    display: $display;
+    top: $top;
+}
+
+@mixin artist_photo_d ($w: 309px, $h: 400px, $position: null, $display: flex) {
+    @include artist_photo($w:$w, $h:$h, $position:$position, $display:$display)
+}
+
+$classes : (artist, guest);
+
+@each $class in $classes {
+    .#{$class}_photo_box {
+        width: 100%;
+        height: 100%;
+
+        .#{$class}_intro {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            @include mobile {
+                @if ($class == artist) { 
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-top: 4px;
+                } @else {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-top: 8px;
+                }
+            }
+            @include desktop {
+                font-size: 20px;
+                line-height: 32px;
+                @if ($class == artist) {
+                    margin-top: 8px;
+                } @else {
+                    margin-top: 16px;
+                } 
+            }
+        }
+
+        .#{$class}_image_none {
+            @include artist_photo();
+            @include mobile {
+                @if ($class == artist) {
+                } @else {
+                    @include artist_photo($w:328px, $h:240px);
+                }
+            }
+
+            @include desktop {
+                @if ($class == artist) {
+                    @include artist_photo_d();
+                } @else {
+                    @include artist_photo_d($w:476px, $h:600px);
+                }
+            }
+        }
+
+        .#{$class}_image_active {
+            @include mobile {
+                @if ($class == artist) {
+                    @include artist_photo($display: flex);
+                } @else {
+                    @include artist_photo($w:328px, $h:240px, $display: flex);
+                }
+            }
+
+            @include desktop {
+                @if ($class == artist) {
+                    @include artist_photo_d($display: flex);
+                } @else {
+                    @include artist_photo_d($w:476px, $h:600px, $display:flex);
+                }
+            }
+        }
+    }
+}

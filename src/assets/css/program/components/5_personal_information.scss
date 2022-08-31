@@ -1,0 +1,98 @@
+@import "../../0_basic.scss";
+
+.event_list_name {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 48px;
+}
+
+.event_name {
+    width: 328px;
+    height: 36px;
+    border-right:0px; 
+    border-top:0px; 
+    border-left:0px; 
+    border-bottom: 1px solid #BDBDBD;;
+    outline: none;
+    margin-top: 4px;
+    padding: 0px 0px;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+.event_list_phonenumber {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 24px;
+}
+
+.event_phonenumber {
+    width: 328px;
+    height: 36px;
+    border-right:0px; 
+    border-top:0px; 
+    border-left:0px;
+    border-bottom: 1px solid #BDBDBD;;
+    outline: none;
+    margin-top: 4px;
+    padding: 0px 0px;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+.event_list_notice_2 {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.005em;
+    margin-top: 2px;
+    color: #616161;
+}
+
+.event_list_button {
+    width: 328px;
+    height: 56px;
+    background: #DBFD5C;
+    box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
+    border-radius: 12px;
+    margin-top: 32px;
+    font-size: 16px;
+    line-height: 22px;       
+    color: black;
+    border: none;
+}
+
+.event_list_agree {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18px;
+
+    .event_list_text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .event_list_check {
+        width: 20px;
+        height: 24px;
+    }
+
+    .event_list_check input[type="checkbox"] {
+        display: none;
+    }
+
+    .event_list_check input[type="checkbox"] + label {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        margin: 2px 0px 0px 0px;
+        background: url("../../../svg/checkbox_none.svg") no-repeat center/16px 16px;
+    }
+
+    .event_list_check input[type="checkbox"]:checked + label {
+        background: url("../../../svg/checkbox_check.svg") no-repeat center/16px 16px; float: right;
+    }
+
+    a:link {color:#000000;}
+    a:visited {color: #000000;}
+}

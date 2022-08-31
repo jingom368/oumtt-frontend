@@ -1,0 +1,102 @@
+@import "../0_basic.scss";
+
+/* chair */
+
+.row_flex_1 {
+    @include desktop {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.chair_title_1 {
+    font-weight: 600;
+    letter-spacing: -0.02em;   
+    @include mobile {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    @include desktop {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+.chair_text {
+    letter-spacing: -0.02em;
+    @include mobile {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 24px;
+    }
+    @include desktop {
+        width: 476px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+.row_flex_2 {
+    @include desktop {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 80px;
+    }
+}
+
+.chair_title_2 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    @include mobile {
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 64px;
+    }
+    @include desktop {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+.chair_link {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid #ffffff;
+    text-align: end;
+    @include mobile {
+        width: 328px;
+        height: 33px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 56px;
+    }
+    @include desktop {
+        width: 976px;
+        height: 39px;
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 115px;
+    }
+
+    .chair_notion {
+        text-decoration: none;
+    }
+
+    .chair_link_text {
+        @include mobile {
+            margin-bottom: 8px;
+        }
+        @include desktop {
+            margin-bottom: 12px;
+        }
+    }
+
+    .chair_link_arrow {
+        margin-left: 4px;
+    }
+}
+
+.chair a:link {color: #ffffff;}
+.chair a:visited {color: #ffffff;}

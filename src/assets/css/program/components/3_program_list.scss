@@ -1,0 +1,97 @@
+@import "../../0_basic.scss";
+
+@mixin program_list (
+    $w: 328px,
+    $h: 44px,
+    $bg: #FFFFFF,
+    $p: 12px 14px,
+    $pb: if($h !=44px, 18px, null),
+    $box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12),
+    $border-radius: 8px,
+    $display: flex,
+    $font-size: 14px,
+    $line-height: 20px,
+    $letter-spacing: -0.02em,
+) {
+    width: $w;
+    height: $h;
+    background: $bg;
+    padding: $p;
+    padding-bottom: $pb;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    display: $display;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin program_list_d (
+    $w: 976px,
+    $h: 80px,
+    $p: 22px 32px,
+    $pb: if($h !=80px, 34px, null),
+    $border-radius: 12px,
+    $font-size: 24px,
+    $line-height: 36px,
+    $letter-spacing: -0.02em,
+) {
+    @include program_list($w:$w, $h:$h, $p:$p, $pb:$pb, $border-radius:$border-radius, $font-size:$font-size, $line-height:$line-height, $letter-spacing:$letter-spacing);
+}
+
+.program_list_down {
+    @include mobile {
+        @include program_list();
+    }
+    @include desktop {
+        @include program_list_d();
+    }
+}
+
+.program_list {
+    flex-direction: column;    
+    @include mobile {
+        @include program_list($h:auto);
+    }
+    @include desktop {
+        @include program_list_d($h:auto);
+    }
+}
+
+.row_flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .program_polygon {
+        @include mobile {
+            width: 14px;
+            height: 12px;
+        }
+        @include desktop {
+            width: 28px;
+            height: 24px;
+        }
+    }
+}
+
+.program_list_text {
+    display: none;
+    letter-spacing: -0.02em;
+    white-space: pre-wrap;
+    @include mobile {
+        line-height: 22px;
+        margin-top: 22px;
+    }
+    @include desktop {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 32px;
+    }
+}
+
+.active {
+    display: flex;
+}

@@ -1,0 +1,86 @@
+@import "./0_basic.scss";
+
+/* header */
+
+header {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+    // @include mobile {
+    //     height: 48px;
+    // }
+    // @include desktop {
+    //     height: 64px;
+    // }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @include mobile {
+            padding: 0px 16px;
+            width: 100%
+        }
+        @include desktop {
+            padding: 0px 24px;
+            width: calc(33.04% + 686px);
+        }
+
+        .nav_home {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @include mobile {
+                width: 100%;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            @include desktop {
+                width: 100%;
+                font-size: 18px;
+                line-height: 26px;
+            }
+
+            .oumtt_link, .program_link, .nav_home_notion {
+                text-decoration: none;
+            }
+
+            .nav_active {
+                color:#DBFD5C;
+                font-weight: 600;
+            }
+
+            .nav_point {
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: #DBFD5C;
+                display: inline-block;
+            }
+        }
+
+        .nav_button {
+            border: 1px solid #FFFFFF;
+            background-color: transparent;
+            letter-spacing: -0.04em;
+            @include mobile {
+                width: 120px;
+                height: 24px;
+                border-radius: 6px;
+                font-size: 13px;
+                line-height: 20px;
+            }
+            @include desktop {
+                width: 160px;
+                height: 36px;
+                border-radius: 8px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+}

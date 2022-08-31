@@ -1,0 +1,45 @@
+@import "../../0_basic.scss";
+
+.support_staff_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include desktop {
+        border-bottom: 1px solid #616161;
+        @for $i from 2 through 7 {
+            &:nth-child(#{$i}) {
+                @if ($i <= 4) {
+                    grid-row-start: 2;
+                } @else {
+                    grid-row-start: 3;
+                }
+            }
+        }
+    }
+
+    .support_staff_role {
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        @include mobile {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        @include desktop {
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }    
+
+    .support_staff_name {
+        font-weight: 400;
+        letter-spacing: -0.02em;    
+        @include mobile {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        @include desktop {
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+}

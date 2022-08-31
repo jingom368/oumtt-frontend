@@ -1,0 +1,79 @@
+@import "../0_basic.scss";
+
+/* Program */
+
+.program_title {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    @include mobile {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    @include desktop {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+.program_notice {
+    letter-spacing: -0.02em;
+    color: #616161;
+    @include mobile {
+        font-size: 12px;
+        line-height: 20px;
+        margin-top: 12px;
+    }
+    @include desktop {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 32px;
+    }
+}
+
+.program_list_grid {
+    display: grid;
+    @include mobile {
+        gap: 12px;
+        margin-top: 24px;
+    }
+    @include desktop{
+        gap: 16px;
+        margin-top: 32px;
+    }
+}
+
+.program_list:nth-child(2) .program_list_text::after {
+    white-space: pre;
+    @include mobile {
+        content: "만져지는 바람결, 반짝이는 새소리, 까슬한 작은 풀
+        \A잎. 이것들은 바짝 긴장했던 몸을 녹이고 숨을 쉬게
+        \A한다. 이제 가장 지독했던 기억들을 곱씹으면서 
+        \A이 순간을 느끼면 된다.
+        \A
+        \A자연이라는 단어의 두 번째 뜻은, 보랏빛 연기라는
+        \A의미이다. 특히 보라가 주는 오묘한 색채는 불안정,
+        \A불행, 신비, 억압됨을 보여준다. 
+        \A나는 주로 일상에서 감당할 수 없는 스트레스를
+        \A받았을 땐 자연으로 산책을 하러 가곤 한다. 
+        \A자연의 소리와 색채를 보고 들으면 안정됨을 느껴서
+        \A인지, 마음이 힘들었던 이유를 곱씹게 된다. 힘듦에서 
+        \A벗어나려고 발버둥 치는 것이 아니라, 하나도 빠짐없
+        \A이 그 기분을 온전히 느끼고 더 깊이 내려간다.
+        \A    
+        \A자연 속에서 보랏빛 연기를 온전히 느끼는 것. 이것이
+        \A나에게는 가장 자연스러운 모습이다."
+    }
+    @include desktop {
+        content : "만져지는 바람결, 반짝이는 새소리, 까슬한 작은풀잎.
+        \A이것들은 바짝 긴장했던 몸을 녹이고 숨을 쉬게 한다.
+        \A이제 가장 지독했던 기억들을 곱씹으면서 이 순간을 느끼면 된다.
+        \A    
+        \A자연이라는 단어의 두번째 뜻은 보라 빛 연기라는 의미다.
+        \A특히 보라가 주는 오묘한 색채는 불안정, 불행, 신비, 억압됨을 보여준다.
+        \A나는 주로 일상에서 감당할 수 없는 스트레스를 받았을 땐 자연으로 산책을 하러 가곤 한다.
+        \A자연의 소리와 색채를 보고 들으면 안정됨을 느껴서인지, 마음이 힘들었던 이유를 곱씹게 된다.
+        \A힘듦에서 벗어나려고 발버둥 치는 것이 아니라, 하나도 빠짐없이 그 기분을 온전히 느끼고 더 깊이 내려간다.
+        \A                        
+        \A자연속에서 보라 빛 연기를 온전히 느끼는 것. 이것이 나에겐 가장 자연스러운 모습이다."
+    }
+}

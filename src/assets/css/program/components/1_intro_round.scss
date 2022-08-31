@@ -1,0 +1,39 @@
+@import "../../0_basic.scss";
+
+.intro_round_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile {
+        .intro_round {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            margin-top:9px;
+            background-color: #ffffff;
+        }
+
+        .intro_line_text {
+            font-size: 11px;
+            line-height: 20px;
+            letter-spacing: -0.04em;
+            margin-top: 4px;
+        }
+    }
+
+    @include desktop {
+        .intro_round {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
+
+        .intro_line_text {
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: -0.04em;
+            margin-top: 6px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@import "../../0_basic.scss";
+
+.event_list_number {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+.event_list_choice {
+    width: 256px;
+    height: 44px;
+    box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    padding: 12px 14px;
+    -webkit-appearance:none; /* for chrome */
+    -moz-appearance:none; /*for firefox*/ 
+    appearance:none;
+    background: url("../../../svg/polygon.svg") no-repeat 94% 50%/14px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #ffffff;
+    color: #616161;
+    border:none;
+    outline: none;
+
+    .event_list_choice_1 {
+        width: 200px;
+        height: 30px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #616161;
+    }
+}
+
+select::-ms-expand{
+    display:none;/*for IE10,11*/
+}

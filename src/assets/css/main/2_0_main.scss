@@ -1,0 +1,77 @@
+@import "../0_basic.scss";
+
+/* main */
+
+main {
+    width: 100%;
+    height: auto;
+    display: grid;
+    @include mobile {
+        grid-template-rows: 480px 732px 920px auto 868px 920px 504px 552px 342px 391px;
+    }
+    @include desktop {
+        grid-template-rows: 1200px 1104px 1332px auto 0px 1292px 734px 1052px 1088px 279px;
+    }
+
+    .main_image {
+        display: flex;
+        width: 100%;
+        object-fit: cover;
+        @include mobile {
+            height: 480px;
+            content : url("../../img/nature_background.png");
+        }
+        @include desktop {
+            height: 1200px;
+            content : url("../../img/nature_background_2.png");
+        }
+    }
+
+    .item {
+        $colors: (null, #000000, #FAFAFA, #FAFAFA, #F7FCE7, #000000, #000000, #FAFAFA, #F7FCE7, #000000);
+        $paddings_mb : (48px 0px 0px 0px, 40px 16px 56px 16px, 40px 16px 56px 16px, 0px 16px 56px 16px, 40px 16px 56px 16px, 40px 16px 56px 16px, 0px 16px 57px 16px, 40px 16px 56px 16px, 40px 16px 56px 16px, 48px 16px 81px 16px);
+        $paddings_dt : (64px 0px 0px 0px, 160px 24px 168px 24px, 160px 24px 80px 24px, 40px 24px 168px 24px, 40px 16px 56px 16px, 160px 24px 40px 24px, 80px 24px 169px 24px, 160px 24px 168px 24px, 160px 0px 168px 0px, 72px 24px 113px 24px);
+        @for $i from 1 through length($colors) {
+            $color: nth($colors, $i);
+            $padding_mb: nth($paddings_mb, $i);
+            $padding_dt: nth($paddings_dt, $i);
+            &:nth-child(#{$i}) {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $color;
+                @if ($i==1) {
+                    position: relative;
+                }
+                @if ($color==#000000) or ($color==null) {
+                    color : #ffffff
+                }
+            }
+
+            &:nth-child(#{$i}) .item_box {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: $color;
+                @include mobile {
+                    width: 360px;
+                    padding: $padding_mb;
+                }
+                @include desktop {
+                    width: 1024px;
+                    padding: $padding_dt;
+                    @if ($i==5) or ($i==9) {
+                        align-items: center; 
+                    } @else if ($i==10) {
+                        flex-direction: row;
+                    }
+                }
+                @if ($i==1) {
+                    align-items: center;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

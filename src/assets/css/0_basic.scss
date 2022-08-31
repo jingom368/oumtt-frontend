@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Maitree';
+    src: url("../fonts/RIDIBatang_min.otf") format("opentype");
+    font-style: normal;
+    unicode-range: U+0020-007E;
+}
+
+@font-face {
+    font-family: 'Eulyoo1945';
+    src: url("../fonts/Eulyoo1945-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    // unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+    font-family: 'Eulyoo1945_semi';
+    src: url("../fonts/Eulyoo1945-SemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+    // unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Eulyoo1945' !important;                 
+    color: inherit;
+    box-sizing: border-box;
+}
+
+// 반응형
+
+$breakpoint-desktop: 1024px;
+@mixin mobile {
+    @media (max-width: #{$breakpoint-desktop - 1px}) {
+      @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-desktop}) {
+      @content;
+    }
+}
