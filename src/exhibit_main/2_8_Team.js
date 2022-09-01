@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import '../assets/css/0_basic.scss'
-import '../assets/css/human_main/2_8_Team.scss'
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import Bian from '../assets/img/exhibit_main/Bian.png'

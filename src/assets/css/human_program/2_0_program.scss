@@ -1,0 +1,60 @@
+@import "../0_basic.scss";
+/* main */
+
+.program {
+    width: 100%;
+    height: auto;
+    display: grid;
+    @include mobile {
+        grid-template-rows: 432px 368px 744px 424px 544px 744px 856px 808px;
+        // grid-template-rows: auto auto auto 360px 536px 832px 258px 1650px;
+    }
+    @include desktop {
+        grid-template-rows: auto 1092px 1120px 1168px 820px 1792px 636px 4000px;
+    }
+
+    .item {
+        $colors: (transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent);
+        // $heights: (480px, 600px, 400px, 1600px, 1200px, 2350px, 2800px 3300px, 1088px, 279px);
+        $paddings_mb : (0px 0px 0px 0px, 64px 16px 24px 16px, 24px 16px 72px 16px, 40px 16px 27px 16px, 0px, 24px 16px 24px 16px, 24px 16px 24px 16px, 32px, 24px);
+        $paddings_dt : (64px 0px 0px 0px, 176px 48px 108px 48px, 96px 24px 64px 24px, 48px 48px 72px 48px, 72px 24px 144px 24px, 48px 32px 72px 32px, 80px 24px 96px 0px, 80px 24px 0px 24px, 0px, 0px);
+        @for $i from 1 through length($colors) {
+            $color: nth($colors, $i);
+            // $height: nth($heights, $i);
+            $padding_mb: nth($paddings_mb, $i);
+            $padding_dt: nth($paddings_dt, $i);
+            &:nth-child(#{$i}) {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                background-color: $color;
+                @if ($i<=9) {
+                    position: relative;
+                }
+                @if ($color==#000000) or ($color==null) {
+                    color : #ffffff
+                }
+            }
+
+            &:nth-child(#{$i}) .item_box {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: $color;
+                @include mobile {
+                    width: 360px;
+                    padding: $padding_mb;
+                }
+                @include desktop {
+                    width: 1024px;
+                    padding: $padding_dt
+                }
+                @if ($i<=9) {
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
