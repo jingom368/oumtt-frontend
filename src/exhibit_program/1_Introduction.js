@@ -12,6 +12,7 @@ import media from '../media'
             color: #B5CEEE;
             margin-top: 180px;
             margin-left: 108px;
+            filter: blur(0.5px);
         `}
     `;
 
@@ -25,6 +26,7 @@ import media from '../media'
             color: #B5CEEE;
             text-align: center;
             margin-top: 184px;
+            filter: blur(0.5px);
         `}
     `
 

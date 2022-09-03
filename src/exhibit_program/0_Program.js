@@ -7,6 +7,8 @@ import Floodwood from './5_Floodwood';
 import StandardA from './6_StandardA';
 import Vestebro from './7_Vestebro';
 import Cosis from './8_Cosis';
+import Contact from './9_Contact'
+import Footer from './10_Footer'
 // import Footer from '../3_Footer'
 import Introduction_b from '../assets/img/exhibit_program/Introduction.png';
 import Sohyun_b from '../assets/img/exhibit_program/Sohyun.png';
@@ -14,13 +16,13 @@ import Yuki_b from '../assets/img/exhibit_program/Yuki.png';
 import Taehoon_p from '../assets/img/exhibit_program/Taehoon_Profile.png'
 import Taehoon_b from '../assets/img/exhibit_program/Taehoon.png';
 import Floodwood_b from '../assets/img/exhibit_program/Floodwood.png';
-import StandardA_b from '../assets/img/exhibit_program/StandardA.png'
-import Vestebro_b from '../assets/img/exhibit_program/Vestebro.png'
-import Cosis_b from '../assets/img/exhibit_program/Cosis.png'
+import StandardA_b from '../assets/img/exhibit_program/StandardA1.png'
+import Vestebro_b from '../assets/img/exhibit_program/Vestebro1.png'
+import Cosis_b from '../assets/img/exhibit_program/Cosis1.png'
+import Contact_b from '../assets/img/exhibit_program/Contact.png'
 import '../assets/css/human_program/2_0_program.scss';
 import styled from 'styled-components';
 import media from '../media'
-import right from '../assets/svg/right2x4.svg'
 
 const Img = styled.img`
     display: flex;
@@ -100,6 +102,10 @@ function Program() {
             <div className='item'>
                 <Img src={Cosis_b} alt=""/>
                 <div className='item_box'><Cosis></Cosis></div>
+            </div>
+            <div className='item'>
+                <Img src={Contact_b} alt=""/>
+                <div className='item_box'><Contact></Contact><Footer></Footer></div>
             </div>
         </div>
     );

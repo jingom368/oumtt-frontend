@@ -1,0 +1,23 @@
+@import "../0_basic.scss";
+
+.footer_info-line_program {
+    width: 100%;
+    border-top: 1px solid #7C95C3;;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    @include mobile {
+        height: 69px;
+    }
+    @include desktop {
+        height: 121px;
+    }
+
+    .footer_info-copyright {
+        width: 100%;
+        font-size: 12px;
+        line-height: 20px;
+        color: #7C95C3;
+        text-align: center;
+    }
+}

@@ -52,15 +52,15 @@ function Introduction() {
 
     useEffect(() => {
         setTimeout(function() {
-        let Height = (document.getElementsByTagName('img')[0].height)*0.45;
-        console.log(Height)
-        document.getElementsByTagName("button")[1].style.marginTop = Height+"px";
-        window.addEventListener('resize', () => { 
             let Height = (document.getElementsByTagName('img')[0].height)*0.45;
             console.log(Height)
             document.getElementsByTagName("button")[1].style.marginTop = Height+"px";
-         }, true);
-        })
+            window.addEventListener('resize', () => { 
+                let Height = (document.getElementsByTagName('img')[0].height)*0.45;
+                console.log(Height)
+                document.getElementsByTagName("button")[1].style.marginTop = Height+"px";
+            }, true);
+        }, 0)
     }, [])
 
     const isMobile = useMediaQuery({

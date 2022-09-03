@@ -41,10 +41,9 @@ const Text = styled.div`
 
 const SText = styled.div`
     ${media.mobile`
-        font-style: normal;
         font-weight: 400;
-        font-size: 8px;
-        line-height: 8px;
+        font-size: 6px;
+        line-height: 12px;
         color: #FFFFFF;
         margin-top: ${(props)=>props.mmt};
         margin-left: ${(props)=>props.mml};
@@ -55,7 +54,7 @@ const SText = styled.div`
 
 const Line = styled.div`
     ${media.mobile`
-        width: ${(props)=>props.mw};
+        width: 120px;
         height: 0.5px;
         border-top: 0.5px solid rgba(255, 255, 255, 0.5);
         margin-left: ${(props)=>props.mml};
@@ -96,34 +95,34 @@ const Floodwood = () => {
             <Mtitle>Floodwood</Mtitle>
             <LRiv>
                 <Text mmt="4px">유목이야기</Text>
-                <Line mw="120px" mml="66px" mmt="11.5px"></Line>
+                <Line mml="66px" mmt="11.5px"></Line>
             </LRiv>
             <Img src={nuri} mw="134px" mh="156px" mp="absolute" mmt="36px" mtf="translate(-50%, 0%)"></Img>
             <Img src={Floodwood_p} mw="328px" mh="344px" mmt="96px" ></Img>
             <Absolute>
                 <LRiv>
                     <Text mmt="48px" mml="36px">Object info.</Text>
-                    <Line mw="128px" mmt="51.5px" mml="21px"></Line>
+                    <Line mmt="51.5px" mml="21px"></Line>
                 </LRiv>
-                <LRiv mmt="32px">
+                <LRiv mmt="24px">
                     <a href="https://jazzy-second-e86.notion.site/8b16fd2cace240b6866d4ffec86a51db"><LRiv>
-                        <SText mml="65px">‘자만보다는 낭만’</SText>
-                        <Svg mw="4px" mh="8px" src={right}></Svg>
+                        <SText mml="69px">‘자만보다는 낭만’</SText>
+                        <Svg mw="3px" mh="6px" mmt="3px" src={right}></Svg>
                     </LRiv></a>
                     <a href="https://jazzy-second-e86.notion.site/4abfbb004be34437b495e81e7c01cbf5"><LRiv>
-                        <SText mml="64px">‘나에게만 보이는 보물들’</SText>
-                        <Svg mw="4px" mh="8px" src={right}></Svg>
+                        <SText mml="72px">‘나에게만 보이는 보물들’</SText>
+                        <Svg mw="3px" mh="6px" mmt="3px" src={right}></Svg>
                     </LRiv></a>
                 </LRiv>
                 <Text mmt="60px" mml="135px">Personal Colors</Text>
-                <SText mta="center" mmt="16px" mml="52px" mlh="16px" mfw="400">‘여름 저녁 바다의 블루’
+                <Text mta="center" mmt="16px" mml="52px" mlh="16px" mfw="400">‘여름 저녁 바다의 블루’
                 <br/>파란색은 우리에게 고요함과 안정을 주는 힘이 있어요.
                 <br/>하지만 정작 식물과 꽃같은 자연에서는파란색을 찾아보기가 힘들죠.    
                 <br/>바다의 파란색, 하늘의 파란색.
-                <br/>파란색은 정작 손에는 잘 잡히지 않는 정말 신비한 색인것 같아요.</SText>
+                <br/>파란색은 정작 손에는 잘 잡히지 않는 정말 신비한 색인것 같아요.</Text>
             </Absolute>
             <a href="https://www.instagram.com/paran__bada/"><LRiv mmt="24px" mjc="end">
-                <SText mta="right">More About 유목이야기</SText>
+                <Text mt    a="right">More About 유목이야기</Text>
                 <Svg src={right}></Svg>
             </LRiv></a>
         </>

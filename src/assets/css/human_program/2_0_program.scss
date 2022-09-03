@@ -6,7 +6,7 @@
     height: auto;
     display: grid;
     @include mobile {
-        grid-template-rows: 432px 368px 744px 424px 544px 744px 856px 808px;
+        grid-template-rows: 432px 368px 744px 424px 544px 788px 1176px 984px 436px;
         // grid-template-rows: auto auto auto 360px 536px 832px 258px 1650px;
     }
     @include desktop {
@@ -14,9 +14,9 @@
     }
 
     .item {
-        $colors: (transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent);
+        $colors: (transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent);
         // $heights: (480px, 600px, 400px, 1600px, 1200px, 2350px, 2800px 3300px, 1088px, 279px);
-        $paddings_mb : (0px 0px 0px 0px, 64px 16px 24px 16px, 24px 16px 72px 16px, 40px 16px 27px 16px, 0px, 24px 16px 24px 16px, 24px 16px 24px 16px, 32px, 24px);
+        $paddings_mb : (0px 0px 0px 0px, 64px 16px 24px 16px, 24px 16px 72px 16px, 40px 16px 28px 16px, 0px, 24px 16px 24px 16px, 24px 16px 24px 16px, 24px 16px 24px 16px, 16px, 16px 16px 0px 16px);
         $paddings_dt : (64px 0px 0px 0px, 176px 48px 108px 48px, 96px 24px 64px 24px, 48px 48px 72px 48px, 72px 24px 144px 24px, 48px 32px 72px 32px, 80px 24px 96px 0px, 80px 24px 0px 24px, 0px, 0px);
         @for $i from 1 through length($colors) {
             $color: nth($colors, $i);
@@ -29,11 +29,8 @@
                 display: flex;
                 justify-content: center;
                 background-color: $color;
-                @if ($i<=9) {
+                @if ($i<=10) {
                     position: relative;
-                }
-                @if ($color==#000000) or ($color==null) {
-                    color : #ffffff
                 }
             }
 
@@ -51,7 +48,7 @@
                     width: 1024px;
                     padding: $padding_dt
                 }
-                @if ($i<=9) {
+                @if ($i<=10) {
                     position: absolute;
                 }
             }

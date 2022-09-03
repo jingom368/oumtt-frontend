@@ -1,0 +1,130 @@
+@import "../0_basic.scss";
+
+/* footer */
+
+.contact_info-grid_program {
+    display: grid;
+    color: #7C95C3;
+    @include mobile {
+        row-gap: 64px;
+    }
+    @include desktop {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 140px;
+    }
+
+    .contact_info-contact {
+        font-weight: 600;
+        line-height: 26px;
+        @include mobile {
+            font-size: 16px;
+        }
+        @include desktop {
+            font-size: 18px;
+        }
+    }
+
+    .contact_info-box {
+        display: flex;
+        flex-direction: column;
+
+        .contact_info-link {
+            display: grid;
+            flex-direction: row;
+            @include mobile {
+                grid-template-columns: (77px 102px 89px);
+                margin-top: 12px;
+                column-gap: 24px;
+            }
+            @include desktop {
+                grid-template-columns: repeat(3, 1fr);
+                margin-top: 16px;
+                column-gap: 40px;
+            }
+
+                .contact_notion, .contact_instagram, .contact_youtube {
+                    text-decoration: none; display: inline-flex;
+                }
+
+            .contact_info-link_image {
+                width: 20px;
+                height: 20px;
+                margin-top: 3px;
+            }
+        
+            .contact_info-link_text {
+                font-size: 16px;
+                line-height: 26px;
+                padding-left: 6px;
+            }
+        }
+
+        .contact_info-click {
+            display: flex;
+            margin-top: 8px;
+            @include mobile {
+                width: 328px;
+                height: 88px;
+                flex-direction: column;
+                align-items: end;
+                margin-bottom: 12px;
+            }
+            @include desktop {
+                width: 488px;
+                height: 36px;
+                flex-direction: row;
+            }
+
+            .contact_input_box {
+                height: 36px;
+                border-right:0px; 
+                border-top:0px; 
+                border-left:0px;
+                border-bottom: 1px solid #7C95C3;
+                outline: none;
+                background-color: transparent;
+                padding: 0px 0px;
+                @include mobile {
+                    width: 328px;
+                }
+                @include desktop {
+                    width: 360px;
+                }
+            }
+
+            input::placeholder {
+                font-size: 14px;
+                margin-bottom: 5px;
+                color: #7C95C3;
+                @include mobile {
+                    line-height: 24px;
+                }
+                @include desktop {
+                    line-height: 20px;
+                }
+            }
+
+            .contact-submit-button {
+                width: 120px;
+                height: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgba(124, 149, 195, 0.3);
+                border-radius: 6px;
+                color: #7C95C3;
+                border: none;
+                @include mobile {
+                    margin-top: 16px;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                @include desktop {
+                    margin-left: 8px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }            
+        }
+    }    
+}

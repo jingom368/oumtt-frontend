@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../assets/css/1_header.scss'
 import { useMediaQuery } from "react-responsive"
+import { Link, NavLink } from 'react-router-dom'
+import media from '../media'
 
 function Header() {
     // const isMobile = useMediaQuery({
@@ -40,22 +42,25 @@ function Header() {
     });
 
     const ScrollToTop = () => {
-        if (isMobile) {
-            window.scrollTo(0, 1226);
-        }
-        if (isPc) {
-            window.scrollTo(0, 3425);
+        let url = window.location.pathname
+        if (url === "/project/exhibit/main/") {
+            if (isMobile) {
+                window.scrollTo(0, 1226);
+            }
+            if (isPc) {
+                window.scrollTo(0, 3425);
+            }
         }
     }
 
     return <header>
         <nav>
             <div className="nav_home">
-                <a className="oumtt_link" href=""><div className="nav_active">Main<div className="nav_point"></div></div></a>
-                <a className="program_link" href="project/exhibit/program">Program</a>
+                <NavLink to="/project/exhibit/main/" className={({isActive}) => (isActive? "nav_active" : "")}>Main</NavLink>
+                <NavLink to="/project/exhibit/program/" className={({isActive}) => (isActive? "nav_active" : "")}>Program</NavLink>
                 <a className="nav_home_notion" href=""><div>Oumtt</div></a>
             </div>
-            <button className="nav_button" onClick={() =>{ScrollToTop()}}>관람 예약하기</button>
+            <NavLink to="/project/exhibit/main/"><button className="nav_button" onClick={() =>{ScrollToTop()}}>관람 예약하기</button></NavLink>
         </nav>
     </header>
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/css/program/2_10_contact.scss'
+import '../assets/css/human_program/2_10_contact.scss'
 import notion from "../assets/svg/Notion.svg"
 import instagram from "../assets/svg/Instagram.svg"
 import youtube from "../assets/svg/YouTube.svg"
@@ -7,10 +7,8 @@ import styled from 'styled-components'
 import media from '../media'
 
 const Div = styled.div`
-    margin-top: 72px;
     margin-bottom: 138px;
     ${media.mobile`
-        margin-top: 0px;
         margin-bottom: 81px;
     `}      
 `
@@ -18,7 +16,7 @@ const Div = styled.div`
 function Contact() {
     return ( 
         <>
-            <Div className="contact_info-grid">
+            <Div className="contact_info-grid_program">
                 <div className="contact_info-box">
                     <div className="contact_info-contact">
                         Follow Us

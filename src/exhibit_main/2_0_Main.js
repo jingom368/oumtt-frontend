@@ -9,7 +9,7 @@ import Project from './2_7_Project';
 import Team from './2_8_Team';
 import Latest from './2_9_Latest'
 import Contact from './2_10_Contact';
-import Footer from '../3_Footer'
+import Footer from './3_Footer'
 import Human_Exhibition from '../assets/img/Human_Exhibition2.png';
 import Exhibition_Background from '../assets/img/Exhibition_Background.png';
 import Personal_Background from '../assets/img/Personal_Background.png';

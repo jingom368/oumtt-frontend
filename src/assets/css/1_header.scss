@@ -32,6 +32,7 @@ header {
         .nav_home {
             display: flex;
             flex-direction: row;
+            color: #B5CEEE;
             justify-content: space-between;
             @include mobile {
                 width: 166px;
@@ -44,16 +45,8 @@ header {
                 line-height: 26px;
             }
 
-            .program_link, .nav_home_notion {
-                color: black;
-            }
-
-            .oumtt_link, .program_link, .nav_home_notion {
-                text-decoration: none;
-            }
-
             .nav_active {
-                color: #6B9FFF;
+                color: #3B7B89;
                 font-weight: 600;
             }
 
@@ -62,14 +55,14 @@ header {
                 width: 4px;
                 height: 4px;
                 border-radius: 50%;
-                background-color: #6B9FFF;
+                background-color: #3B7B89;
                 display: inline-block;
             }
         }
 
         .nav_button {
-            border: 1px solid #6B9FFF;
-            color: #6B9FFF;
+            border: 1px solid #B5CEEE;
+            color: #B5CEEE;
             background-color: transparent;
             letter-spacing: -0.04em;
             @include mobile {

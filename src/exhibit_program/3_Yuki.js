@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import '../assets/css/0_basic.scss'
 import media from '../media'
 import right from '../assets/svg/right2x4.svg'
+import Yuki_p from '../assets/img/exhibit_program/Yuki_p.png'
 
 const Btitle = styled.div`
     ${media.mobile`
@@ -11,15 +12,15 @@ const Btitle = styled.div`
         font-weight: 500;
         font-size: 16px;
         line-height: 16px;
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(222, 236, 239, 0.8);
     `}
 `
 
 const Line = styled.div`
     ${media.mobile`
         width: 328px;
-        border: 0.5px solid rgba(255, 255, 255, 0.5);
-        margin-top: 11px;
+        border-top: 0.5px solid rgba(222, 236, 239, 0.8);
+        margin-top: 11.5px;
     `}
 `
 
@@ -27,10 +28,12 @@ const LRiv = styled.div`
     ${media.mobile`
         display: flex;
         flex-direction: row;
+        justify-content: ${(props)=>props.mjc};
+        margin-top: ${(props)=>props.mmt};
     `}
 `
 
-const Img = styled.div`
+const Img = styled.img`
     ${media.mobile`
         width: 129px;
         height: 168px;
@@ -70,11 +73,12 @@ const Text = styled.div`
     `}
 `
 
-const Svg = styled.div`
+const Svg = styled.img`
     ${media.mobile`
         width: 4px;
-        heigth: 8px;
+        height: 8px;
         margin-left: 4px;
+        margin-top: ${(props)=>props.mmt};
     `}
 `
 
@@ -83,8 +87,8 @@ const Yuki = () => {
         <>
             <Btitle>Collaboration Artists</Btitle>
             <Line></Line>
-            <LRiv>
-                <Img src={Yuki} />
+            <LRiv mjc="space-between">
+                <Img src={Yuki_p} />
                 <Div>
                     <Mtitle mcolor="rgba(222, 236, 239, 0.8)" mta="right" mmt="32px" mmr="16px">Main Artist</Mtitle>
                     <Text mcolor="rgba(222, 236, 239, 0.8)" mta="right" mmt="8px" mmr="16px">Yuki Jin</Text>
@@ -96,12 +100,14 @@ const Yuki = () => {
                     </Text>
                 </Div>
             </LRiv>
-            <Text mcolor="#FFFFFF" mta="center" mmt="64px">배소현 무용수는 생각이 깊은 사람이다.</Text>
-            <Text mcolor="#FFFFFF" mta="center" mmt="96px" mlh="16px">그녀가 좋아하는 파란 물감으로 
+            <Text mcolor="rgba(222, 236, 239, 0.8)" mta="center" mmt="64px">배소현 무용수는 생각이 깊은 사람이다.</Text>
+            <Text mcolor="rgba(222, 236, 239, 0.8)" mta="center" mmt="96px" mlh="16px">그녀가 좋아하는 파란 물감으로 
             <br/>그 깊이를  표현해 보고 싶었다.</Text>
-                <Text mcolor="#FFFFFF" mta="right" mmt="131px" mfs="6px" mlh="10px">More About Yuki Page</Text>
+            <LRiv mjc="end" mmt="132px">
+                <a href="https://www.instagram.com/yukichen0508_photo/"><Text mcolor="rgba(222, 236, 239, 0.8)" mta="right" mfs="8px" mlh="8px">More About Yuki Page</Text></a>
                 <Svg src={right} />
-            <Mtitle mcolor="#FFFFFF" mta="center" mmt="75px">Music Composer</Mtitle>
+            </LRiv>
+            <Mtitle mcolor="rgba(222, 236, 239, 0.8)" mta="center" mmt="76px">Music Composer</Mtitle>
         </>
     )
 }
