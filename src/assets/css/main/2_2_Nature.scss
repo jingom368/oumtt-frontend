@@ -1,0 +1,202 @@
+@import "../0_basic.scss";
+
+@media (max-width:1024px) {
+
+    .nature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 984px;
+        background-color: black;
+
+        .nature_box {
+            width: 360px;
+            padding-left: 16px;
+            padding-right: 16px;
+            height: 1984px;
+        }
+
+        .nature_title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: -0.02em;
+            padding-top: 80px;
+        }
+
+        .nature_text {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .nature_intro {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 8px;
+            line-height: 12px;
+            padding-top: 56px;
+        }
+
+        .nature_image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .nature_photo_1 {
+            display: block;
+            width: 328px;
+            height: 178px;
+            margin-top: 4px;
+            object-fit: cover;
+        }
+
+        .nature_photo_2 {
+            display: block;
+            width: 328px;
+            height: 178px;
+            margin-top: 8px;
+            object-fit: cover;
+        }
+
+        .nature_value {
+            font-size: 13px;
+            line-height: 24px;
+            letter-spacing: -0.005em;
+            padding-top: 16px;
+            text-align: end;
+        }
+
+        #nature_value::after {
+            content:"서울의 정신없는 도심 속 자연, 서울숲 공원\A숨 막히는 도시를 지나 서울숲으로 들어가면,\A코를 간질이는 자연의 향, 사람들의 여유로운 표정,\A아이들의 웃음소리 그리고 산책하는 강아지들";
+            white-space: pre;
+        }
+
+        .nature_value_2 {
+            font-size: 14px;
+            line-height: 26px;
+            letter-spacing: -0.005em;
+            padding-top: 16px;
+            text-align: end;
+        }
+
+        .nature_value_3 {
+            font-size: 13px;
+            line-height: 24px;
+            letter-spacing: -0.005em;
+            padding-top: 16px;
+            padding-bottom: 86px;
+            text-align: end;
+        }
+
+        .nature_value_3::after {
+            content:"가장 푸릇푸릇 한 6월의 여름날,\A자연을 대하는 가지각색의 모든 존재들에게\A‘가장 자연한 마음’을 담아 - 우리의 춤과 예술로\A‘있는 그대로의 당신’에게 더 다가가고자 합니다\A\A우리와 만나, 함께 자연을 느끼고, 예술을 움 틔워보아요";
+            white-space: pre;
+        }
+    }
+}
+
+
+@media (min-width:1024px) {
+
+    .nature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 1784px;
+        background-color: black;
+
+        .nature_box {
+            width: 1024px;
+            padding-left: 107px;
+            padding-right: 107px;
+            height: 1784px;
+        }
+
+        .nature_title {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 64px;
+            letter-spacing: -0.02em;
+            padding-top: 160px;
+        }
+
+        .nature_text {
+            font-size: 36px;
+            line-height: 44px;
+            letter-spacing: -0.02em;
+        }
+
+        .nature_intro {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 14px;
+            line-height: 20px;
+            padding-top: 120px;
+        }
+
+        .nature_image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .nature_photo_1 {
+            display: block;
+            width: 810px;
+            height: 440px;
+            margin-top: 16px;
+            object-fit: cover;
+        }
+
+        .nature_photo_2 {
+            display: block;
+            width: 810px;
+            height: 440px;
+            margin-top: 16px;
+            object-fit: cover;
+        }
+
+        .nature_value {
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: -0.005em;
+            padding-top: 14px;
+            text-align: end;
+        }
+
+        #nature_value::after {
+            content:"서울의 정신없는 도심 속 자연, 서울숲 공원\A숨 막히는 도시를 지나 서울숲으로 들어가면,코를 간질이는 자연의 향,\A사람들의 여유로운 표정, 아이들의 웃음소리 그리고 산책하는 강아지들";
+            white-space: pre;
+        }
+
+        .nature_value_2 {
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: -0.005em;
+            padding-top: 14px;
+            text-align: end;
+        }
+
+        .nature_value_3 {
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: -0.005em;
+            padding-top: 14px;
+            padding-bottom: 160px;
+            text-align: end;
+        }
+
+        .nature_value_3::after {
+            content:"가장 푸릇푸릇 한 6월의 여름날,\A자연을 대하는 가지각색의 모든 존재들에게 ‘가장 자연한 마음’을 담아\A우리의 춤과 예술로 ‘있는 그대로의 당신’에게 더 다가가고자 합니다\A\A우리와 만나, 함께 자연을 느끼고, 예술을 움 틔워보아요";
+            white-space: pre;
+        }
+    }
+}

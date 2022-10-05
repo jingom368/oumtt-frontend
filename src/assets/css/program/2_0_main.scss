@@ -2,7 +2,7 @@
 
 /* main */
 
-main {
+.program {
     width: 100%;
     height: auto;
     display: grid;
@@ -19,11 +19,11 @@ main {
         object-fit: cover;
         @include mobile {
             height: 480px;
-            content : url("../../img/nature_background.png");
+            content : url("../../img/nature_program/nature_background.png");
         }
         @include desktop {
             height: 1200px;
-            content : url("../../img/nature_background_2.png");
+            content : url("../../img/nature_program/nature_background_2.png");
         }
     }
 

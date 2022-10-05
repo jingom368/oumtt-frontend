@@ -1,0 +1,438 @@
+@media (max-width:1024px) {
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 920px;
+        background-color: black;
+
+        .contact-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 360px;
+            height: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        .contact-index {
+            width: 328px;
+            height: 268px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: -0.02em;
+            margin-top: 48px;
+        }
+
+        .contact_point {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #DBFD5C;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+        }
+
+        .contact-info_time {
+            font-size: 15px;
+            line-height: 20px;
+            letter-spacing: -0.03em;
+        }
+
+        .contact-info_place {
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 4px;
+        }
+
+        .contact-info_notice {
+            font-size: 11px;
+            line-height: 20px;
+            margin-top: 24px;
+            color: #EEEEEE;
+        }
+
+        .contact-submit {
+            display: flex;
+            flex-direction: column;
+            margin-top: 64px;
+        }
+
+        .contact-submit_info-personal {
+            width: 328px;
+            height: 168px;
+        }
+
+        .contact-submit_info-name {
+            font-size: 14px;
+            line-height: 24px;
+            color: #DBFD5C;
+        }
+
+        .contact-submit_info-phonenumber {
+            font-size: 14px;
+            line-height: 24px;
+            color: #DBFD5C;
+            margin-top: 40px;
+        }
+
+        #input_box_1 {
+            width: 328px;
+            height: 36px;
+            border-right:0px; 
+            border-top:0px; 
+            border-left:0px; 
+            outline: none;
+            background-color: transparent;
+            margin-top: 4px;
+            padding: 0px 0px;
+        }
+
+        #input_box_2 {
+            width: 328px;
+            height: 36px;
+            border-right:0px; 
+            border-top:0px; 
+            border-left:0px; 
+            outline: none;
+            background-color: transparent;
+            margin-top: 4px;
+            padding: 0px 0px;
+        }
+
+        .contact-submit_info-notice {
+            width: 311px;
+            height: 20px;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: -0.005em;
+            color: #E0E0E0;
+            margin-top: 2px;
+        }
+
+        .contact-submit_how-think {
+            width: 293px;
+            height: 20px;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 44px;
+        }
+
+        .contact-submit_select-think {
+            width: 328px;
+            height: 40px;
+            border: 1px solid #9E9E9E;
+            border-radius: 8px;
+            padding: 0px 14px;
+            -webkit-appearance:none; /* for chrome */
+            -moz-appearance:none; /*for firefox*/ 
+            appearance:none;
+            background: url("../../img/nature_main/Polygon.png") no-repeat 95% 50%/16px auto;
+            font-size: 14px;
+            line-height: 20px;
+            color: #DBFD5C;
+            background-color: transparent;
+            margin-top: 12px;
+        }
+
+        select::-ms-expand{
+            display:none;/*for IE10,11*/
+        }
+
+        .contact-submit_select-think option {
+            width: 328px;
+            height: 40px;
+            background-color: #000000;
+        }
+
+        .contact-submit-button {
+            width: 328px;
+            height: 56px;
+            background: #DBFD5C;
+            box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
+            backdrop-filter: blur(4px);
+            border-radius: 12px;
+            margin-top: 32px;
+            font-size: 16px;
+            line-height: 26px;
+            color: black;
+        }
+
+        .contact-submit_check {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            height: 24px;
+            margin-top: 18px;
+            margin-bottom: 152px;
+        }
+
+        .contact-submit_check-dance {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .contact-submit_check-agree {
+            font-size: 14px;
+            line-height: 24px;
+            margin-left: 88px;
+        }
+
+        #contact-submit_check-box {
+            display: flex;
+            align-items: center;
+            width: 16px;
+            height: 16px;
+            margin-left: 12px;
+            margin-top: 4px;
+        }
+
+        .contact-submit_check-box input[type="checkbox"] {
+            display: none;
+        }
+
+        .contact-submit_check-box input[type="checkbox"] + label {
+            width: 16px;
+            height: 16px;
+            margin: 4px 0px 0px 12px;
+            background:url("../../img/nature_main/checkbox_none.png") no-repeat center/16px 16px;
+        }
+
+        .contact-submit_check-box input[type="checkbox"]:checked + label {
+            background:url("../../img/nature_main/checkbox_check.png") no-repeat center/16px 16px; float: right}
+
+        .contact a:link {color: #ffffff;}
+        .contact a:visited {color: #FFFFFF;}
+    }   
+}
+
+@media (min-width:1024px) {
+
+    #input_box_1 {
+        width: 310px;
+        height: 36px;
+        border-right:0px; 
+        border-top:0px; 
+        border-left:0px; 
+        outline: none;
+        background-color: transparent;
+        margin-top: 4px;
+        padding: 0px 0px;
+    }
+
+    #input_box_2 {
+        width: 310px;
+        height: 36px;
+        border-right:0px; 
+        border-top:0px; 
+        border-left:0px; 
+        outline: none;
+        background-color: transparent;
+        margin-top: 4px;
+        padding: 0px 0px;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        height: 680px;
+        background-color: black;
+
+        .contact-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 1024px;
+            height: 100%;
+            padding-left: 107px;
+            padding-right: 107px;
+        }
+
+        .contact-index {
+            width: 303px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-title {
+            font-weight: 600;
+            font-size: 42px;
+            line-height: 56px;
+            letter-spacing: -0.03em;
+            margin-top: 112px;
+        }
+
+        .contact_point {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #DBFD5C;
+            display: inline-block;
+            margin-bottom: 26px;
+        }
+
+        .contact-info {
+            margin-top: 210px;
+        }
+
+        .contact-info_time {
+            font-size: 22px;
+            line-height: 32px;
+            letter-spacing: -0.03em;
+        }
+
+        .contact-info_place {
+            font-size: 18px;
+            line-height: 26px;
+            margin-top: 4px;
+        }
+
+        .contact-info_notice {
+            font-size: 12px;
+            line-height: 20px;
+            margin-top: 24px;
+            margin-bottom: 120px;
+            color: #EEEEEE;
+        }
+
+        .contact-submit {
+            display: flex;
+            flex-direction: column;
+            padding-top: 124px;
+            padding-left: 179px;
+        }
+
+        .contact-submit_info-personal {
+            width: 328px;
+            height: 168px;
+        }
+
+        .contact-submit_info-name {
+            font-size: 14px;
+            line-height: 24px;
+            color: #DBFD5C;
+        }
+
+        .contact-submit_info-phonenumber {
+            font-size: 14px;
+            line-height: 24px;
+            color: #DBFD5C;
+            margin-top: 40px;
+        }
+
+        .contact-submit_info-notice {
+            width: 328px;
+            height: 20px;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: -0.005em;
+            color: #E0E0E0;
+            margin-top: 2px;
+        }
+
+        .contact-submit_how-think {
+            width: 256px;
+            height: 20px;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 44px;
+        }
+
+        .contact-submit_select-think {
+            width: 328px;
+            height: 40px;
+            border: 1px solid #9E9E9E;
+            border-radius: 8px;
+            padding: 0px 14px;
+            -webkit-appearance:none; /* for chrome */
+            -moz-appearance:none; /*for firefox*/ 
+            appearance:none;
+            background: url("../../img/nature_main/Polygon.png") no-repeat 95% 50%/14px 12px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #DBFD5C;
+            background-color: transparent;
+            margin-top: 12px;
+        }
+
+        select option {
+            padding: 5px;
+        }
+
+        select::-ms-expand{
+            display:none;/*for IE10,11*/
+        }
+
+        .contact-submit_select-box {
+            width: 328px;
+            height: 40px;
+            padding: 5px 15px 5px;
+            background-color: #000000;
+        }
+
+        .contact-submit-button {
+            width: 328px;
+            height: 56px;
+            background: #DBFD5C;
+            box-shadow: 0px -1px 4px rgba(255, 255, 255, 0.12), 0px 2px 16px rgba(0, 0, 0, 0.24);
+            backdrop-filter: blur(4px);
+            border-radius: 12px;
+            margin-top: 32px;
+            font-size: 16px;
+            line-height: 22px;
+            color: black;
+        }
+
+        .contact-submit_check {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            height: 24px;
+            margin-top: 18px;
+            margin-bottom: 120px;
+        }
+
+        .contact-submit_check-dance {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .contact-submit_check-agree {
+            font-size: 14px;
+            line-height: 24px;
+            margin-left: 87px;
+        }
+
+        .contact-submit_check-box input[type="checkbox"] {
+            display: none;
+        }
+
+        .contact-submit_check-box input[type="checkbox"] + label {
+            width: 16px;
+            height: 16px;
+            margin: 4px 0px 0px 12px;
+            background:url("../../img/nature_main/checkbox_none.png") no-repeat center/16px 16px;
+        }
+
+        .contact-submit_check-box input[type="checkbox"]:checked + label {
+            background:url("../../img/nature_main/checkbox_check.png") no-repeat center/16px 16px; float: right}
+
+        .contact a:link {color: #ffffff;}
+        .contact a:visited {color: #FFFFFF;}
+    }
+}

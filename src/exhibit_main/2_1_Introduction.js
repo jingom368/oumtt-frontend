@@ -1,29 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import '../assets/css/0_basic.scss'
 import media from '../media'
 import { useMediaQuery } from "react-responsive"
 
-    // const Text = styled.div`
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     margin-left: 28px;
-    //     font-weight: 600;
-    //     font-size: 140px;
-    //     line-height: 170px;
-    //     text-align: center;
-    //     letter-spacing: 0.16em;
-    //     color: #DEECEF;
-    //     filter: blur(4px);
-    //     text-shadow: 0px 5px 10px rgba(0,0,0,0.23);
-    // `
-
     const Div = styled.div`
-        height: auto;
         display: flex;
         justify-content: center;
-        align-items: center;
     `
 
     const Button = styled.button`
@@ -39,29 +22,18 @@ import { useMediaQuery } from "react-responsive"
         line-height: 30px;
         letter-spacing: -0.04em;
         color: #6B9FFF;
+        margin-top: calc(180%);
         ${media.mobile`
             width: 120px;
             height: 32px;
             border-radius: 8px;
             font-size: 12px;
             line-height: 12px;
+            margin-top: calc(180%);
         `}
     `    
 
 function Introduction() {
-
-    useEffect(() => {
-        setTimeout(function() {
-            let Height = (document.getElementsByTagName('img')[0].height)*0.45;
-            console.log(Height)
-            document.getElementsByTagName("button")[1].style.marginTop = Height+"px";
-            window.addEventListener('resize', () => { 
-                let Height = (document.getElementsByTagName('img')[0].height)*0.45;
-                console.log(Height)
-                document.getElementsByTagName("button")[1].style.marginTop = Height+"px";
-            }, true);
-        }, 0)
-    }, [])
 
     const isMobile = useMediaQuery({
         query : "(max-width:1023px)"
@@ -80,11 +52,9 @@ function Introduction() {
     }
 
     return (
-        <>
-            <Div>
+        <Div>
             <Button onClick={() =>{ScrollToTop()}}>관람 예약하기</Button>
-            </Div>
-        </>
+        </Div>
     )
 }
 

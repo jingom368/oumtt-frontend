@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import '../assets/css/1_header.scss'
 import { useMediaQuery } from "react-responsive"
-import { Link, NavLink } from 'react-router-dom'
-import media from '../media'
+import { NavLink } from 'react-router-dom'
 
 function Header() {
     // const isMobile = useMediaQuery({
@@ -42,14 +41,11 @@ function Header() {
     });
 
     const ScrollToTop = () => {
-        let url = window.location.pathname
-        if (url === "/project/exhibit/main/") {
-            if (isMobile) {
-                window.scrollTo(0, 1226);
-            }
-            if (isPc) {
-                window.scrollTo(0, 3425);
-            }
+        if (isMobile) {
+            window.scrollTo(0, 1226);
+        }
+        if (isPc) {
+            window.scrollTo(0, 3425);
         }
     }
 
@@ -58,7 +54,7 @@ function Header() {
             <div className="nav_home">
                 <NavLink to="/project/exhibit/main/" className={({isActive}) => (isActive? "nav_active" : "")}>Main</NavLink>
                 <NavLink to="/project/exhibit/program/" className={({isActive}) => (isActive? "nav_active" : "")}>Program</NavLink>
-                <a className="nav_home_notion" href=""><div>Oumtt</div></a>
+                <a className="nav_home_notion" href="https://oumtt.com/"><div>Oumtt</div></a>
             </div>
             <NavLink to="/project/exhibit/main/"><button className="nav_button" onClick={() =>{ScrollToTop()}}>관람 예약하기</button></NavLink>
         </nav>
